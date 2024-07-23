@@ -64,7 +64,7 @@ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride o
 
 peer lifecycle chaincode querycommitted --channelID mychannel --name studentchaincode --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem
 
-//probar el chaincode Toll 
+//probar el chaincode studentchaincode 
   export FABRIC_CFG_PATH=${PWD}/../config
   export CORE_PEER_LOCALMSPID="CantabriaMSP"
   export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_RUTA78_CA
@@ -78,13 +78,13 @@ peer lifecycle chaincode querycommitted --channelID mychannel --name studentchai
   export CORE_PEER_ADDRESS=localhost:7051
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem -C mychannel -n studentchaincode --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt -c '{"function":"InitLedger","Args":[]}'
 
-peer chaincode query -C mychannel -n studentchaincode -c '{"function":"QueryTollRecord","Args":["0xc83273f025ecEd0317f52DfE26d95C4638a10D7E"]}'
+peer chaincode query -C mychannel -n studentchaincode -c '{"function":"QuerystudentchaincodeRecord","Args":["0xc83273f025ecEd0317f52DfE26d95C4638a10D7E"]}'
 
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem -C mychannel -n studentchaincode --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls/ca.crt -c '{"function":"CreateAsset","Args":["asset8","green","16","Sergio","750"]}'
-peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QueryTollRecord"]}'
+peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QuerystudentchaincodeRecord"]}'
 
 
-###### NUEVO CODIGO #########
+###### CODIGO PARA INTERACTUAR CON CONTRATO#########
 #Aprobar contrato por ambas organizaciones
 export PACKAGE_ID="studentchaincode_1.0.1:8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f"
 #Org1 - Iebs
@@ -131,21 +131,8 @@ export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/cantabria.
 export CORE_PEER_ADDRESS=localhost:9051
 export ORDERER_CA=${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem
 
-#Ejecutar funcion de Initledger
-peer chaincode invoke -C mychannel  -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
-
-#export PEER0_IEBS_CA=/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/tlscacerts/ca.crt
-export PEER0_IEBS_CA=$CORE_PEER_TLS_ROOTCERT_FILE
-#/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/tlsca/tlsca.iebs.universidades.com-cert.pem
-
-
-#ver chaincode aprobado por las partes
-peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --output json
-
-peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_IEBS_CA
-
-
-# Version 2
+# Ejercicios con Registros 
+#Se ha cambiado la politica de endorsement a ANY, para que baste solo una organizacion para escribir
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
 export CORE_PEER_TLS_ENABLED=true
@@ -155,7 +142,26 @@ export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/iebs.unive
 export CORE_PEER_ADDRESS=localhost:7051
 export ORDERER_CA=${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem
 
+#Se crean los registros iniciales del contrato InitLedger
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
 
-#otra prueba
-peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --channelID cursochannel --name basic --version 1.0 --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls/ca.crt
+#se crea un tercer alumno para la universidad IEBS
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+
+#Se cambia el primer elemento desde la universidad IEBS a Cantabria
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+
+
+#######
+#Comandos "peer" para Ejecutar las Funciones
+#1. Registrar un Estudiante (RegisterStudent)
+#Para registrar un estudiante con ID "3", nombre "Richard Poblete" y universidad "IEBS":
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"RegisterStudent","Args":["3","Richard Poblete","IEBS"]}'
+
+#2. Transferir un Estudiante (TransferStudent)
+#Para transferir un estudiante con ID "1" a la universidad "Cantabria":
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"TransferStudent","Args":["1","Cantabria"]}'
+
+#3. Consultar un Estudiante (QueryStudent)
+#Para consultar la información de un estudiante con ID "1":
+peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QueryStudent","1"]}'
