@@ -1,0 +1,478 @@
+ Container explorer.mynetwork.com  Stopping
+ Container explorer.mynetwork.com  Stopping
+ Container explorer.mynetwork.com  Stopped
+ Container explorer.mynetwork.com  Removing
+ Container explorer.mynetwork.com  Removed
+ Container explorerdb.mynetwork.com  Stopping
+ Container explorerdb.mynetwork.com  Stopping
+ Container explorerdb.mynetwork.com  Stopped
+ Container explorerdb.mynetwork.com  Removing
+ Container explorerdb.mynetwork.com  Removed
+[0;34mUsing docker and docker-compose[0m
+[0;34mStopping network[0m
+ Container ca_iebs  Stopping
+ Container ca_iebs  Stopping
+ Container peer0.cantabria.universidades.com  Stopping
+ Container peer0.cantabria.universidades.com  Stopping
+ Container orderer.universidades.com  Stopping
+ Container orderer.universidades.com  Stopping
+ Container ca_cantabria  Stopping
+ Container ca_cantabria  Stopping
+ Container peer0.iebs.universidades.com  Stopping
+ Container peer0.iebs.universidades.com  Stopping
+ Container ca_orderer  Stopping
+ Container ca_orderer  Stopping
+ Container orderer.universidades.com  Stopped
+ Container orderer.universidades.com  Removing
+ Container orderer.universidades.com  Removed
+ Container peer0.iebs.universidades.com  Stopped
+ Container peer0.iebs.universidades.com  Removing
+ Container peer0.iebs.universidades.com  Removed
+ Container couchdb0  Stopping
+ Container couchdb0  Stopping
+ Container peer0.cantabria.universidades.com  Stopped
+ Container peer0.cantabria.universidades.com  Removing
+ Container peer0.cantabria.universidades.com  Removed
+ Container couchdb1  Stopping
+ Container couchdb1  Stopping
+ Container couchdb0  Stopped
+ Container couchdb0  Removing
+ Container couchdb0  Removed
+ Container couchdb1  Stopped
+ Container couchdb1  Removing
+ Container couchdb1  Removed
+ Container ca_cantabria  Stopped
+ Container ca_cantabria  Removing
+ Container ca_orderer  Stopped
+ Container ca_orderer  Removing
+ Container ca_iebs  Stopped
+ Container ca_iebs  Removing
+ Container ca_cantabria  Removed
+ Container ca_orderer  Removed
+ Container ca_iebs  Removed
+ Volume compose_peer0.iebs.universidades.com  Removing
+ Volume compose_orderer.universidades.com  Removing
+ Volume compose_orderer2.universidades.com  Removing
+ Volume compose_peer0.org3.universidades.com  Removing
+ Volume compose_orderer4.universidades.com  Removing
+ Volume compose_peer0.cantabria.universidades.com  Removing
+ Volume compose_orderer3.universidades.com  Removing
+ Network universidades_network  Removing
+ Volume compose_orderer3.universidades.com  Removed
+ Volume compose_orderer4.universidades.com  Removed
+ Volume compose_orderer2.universidades.com  Removed
+ Volume compose_peer0.org3.universidades.com  Removed
+ Volume compose_peer0.iebs.universidades.com  Removed
+ Volume compose_orderer.universidades.com  Removed
+ Volume compose_peer0.cantabria.universidades.com  Removed
+ Network universidades_network  Removed
+[0;34mRemoving remaining containers[0m
+[0;34mRemoving generated chaincode docker images[0m
+Untagged: dev-peer0.cantabria.universidades.com-studentchaincode_1.0.1-8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f-a6f6be16be2743a3428953522fc6fb6e2c79a75f88b5529ac98a384e5af97910:latest
+Deleted: sha256:32bb84f9bee786de83a389f44d58cf8bc26f5829f1619ee4194ee727fd357fa9
+Deleted: sha256:2336186c50defc889c6a9afdbd1ab95dcdf7e899a30ad9acf255f0dcb3ab3745
+Deleted: sha256:d9e27548157429296892f7637a30df48cac542982b73a66ed63bb73ad742358d
+Deleted: sha256:26bb1d64635962b7e4c91df4674d50cf02aaea7245e44df9df9a46937d33fef0
+Untagged: dev-peer0.iebs.universidades.com-studentchaincode_1.0.1-8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f-52d7c2b80dabe94e1c4baae701129671da0853e60c58e60fbd32e2e17149f0a6:latest
+Deleted: sha256:9f65e7aa496fc1b153ccc0c46ea6f25d55876f8faba7273bafe387afb29c9868
+Deleted: sha256:09f545c683c3b89dc17e646b2a1952f2a96b4c8b2489bf0195ca5870d01719db
+Deleted: sha256:0e5d594d8d2f85a0609c2d1bcfb8147995e3ca4e46c44ae2145355591e943269
+Deleted: sha256:8d506ec424bae0879c8334cd78f1a741e50577e7eda440b9a535a690f732b276
+blockchain-explorer_pgdata
+blockchain-explorer_walletstore
+[0;34mUsing docker and docker-compose[0m
+[0;34mCreating channel 'mychannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb with crypto from 'Certificate Authorities'[0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[0;34mGenerating certificates using Fabric CA[0m
+ Network universidades_network  Creating
+ Network universidades_network  Created
+ Container ca_orderer  Creating
+ Container ca_cantabria  Creating
+ Container ca_iebs  Creating
+ Container ca_cantabria  Created
+ Container ca_iebs  Created
+ Container ca_orderer  Created
+ Container ca_orderer  Starting
+ Container ca_cantabria  Starting
+ Container ca_iebs  Starting
+ Container ca_cantabria  Started
+ Container ca_orderer  Started
+ Container ca_iebs  Started
+[0;34mCreating Iebs Identities[0m
+[0;34mEnrolling the CA admin[0m
++ fabric-ca-client enroll -u https://admin:adminpw@localhost:7054 --caname ca-iebs --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Created a default configuration file at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:32 [INFO] encoded CSR
+2024/07/23 16:30:32 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:32 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/cacerts/localhost-7054-ca-iebs.pem
+2024/07/23 16:30:32 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:32 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-iebs --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-iebs --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-iebs --id.name iebsadmin --id.secret iebsadminpw --id.type admin --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] TLS Enabled
+Password: iebsadminpw
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-iebs -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:32 [INFO] encoded CSR
+2024/07/23 16:30:32 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:32 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/msp/cacerts/localhost-7054-ca-iebs.pem
+2024/07/23 16:30:32 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:32 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-iebs -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls --enrollment.profile tls --csr.hosts peer0.iebs.universidades.com --csr.hosts localhost --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:32 [INFO] encoded CSR
+2024/07/23 16:30:32 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/signcerts/cert.pem
+2024/07/23 16:30:32 [INFO] Stored TLS root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/tlscacerts/tls-localhost-7054-ca-iebs.pem
+2024/07/23 16:30:32 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/IssuerPublicKey
+2024/07/23 16:30:32 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:7054 --caname ca-iebs -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:32 [INFO] encoded CSR
+2024/07/23 16:30:32 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:32 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/cacerts/localhost-7054-ca-iebs.pem
+2024/07/23 16:30:32 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:32 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://iebsadmin:iebsadminpw@localhost:7054 --caname ca-iebs -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/iebs/ca-cert.pem
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:32 [INFO] encoded CSR
+2024/07/23 16:30:32 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:32 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp/cacerts/localhost-7054-ca-iebs.pem
+2024/07/23 16:30:32 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:32 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mCreating Cantabria Identities[0m
+[0;34mEnrolling the CA admin[0m
++ fabric-ca-client enroll -u https://admin:adminpw@localhost:8054 --caname ca-cantabria --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Created a default configuration file at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:32 [INFO] encoded CSR
+2024/07/23 16:30:32 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:32 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/msp/cacerts/localhost-8054-ca-cantabria.pem
+2024/07/23 16:30:32 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:32 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-cantabria --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-cantabria --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:32 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:32 [INFO] TLS Enabled
+2024/07/23 16:30:32 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-cantabria --id.name cantabriaadmin --id.secret cantabriaadminpw --id.type admin --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:33 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] TLS Enabled
+Password: cantabriaadminpw
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-cantabria -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/msp/cacerts/localhost-8054-ca-cantabria.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-cantabria -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls --enrollment.profile tls --csr.hosts peer0.cantabria.universidades.com --csr.hosts localhost --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored TLS root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls/tlscacerts/tls-localhost-8054-ca-cantabria.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/peers/peer0.cantabria.universidades.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:8054 --caname ca-cantabria -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/User1@cantabria.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/User1@cantabria.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/User1@cantabria.universidades.com/msp/cacerts/localhost-8054-ca-cantabria.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/User1@cantabria.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/User1@cantabria.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://cantabriaadmin:cantabriaadminpw@localhost:8054 --caname ca-cantabria -M /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/Admin@cantabria.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/cantabria/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/Admin@cantabria.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/Admin@cantabria.universidades.com/msp/cacerts/localhost-8054-ca-cantabria.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/Admin@cantabria.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/users/Admin@cantabria.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mCreating Orderer Org Identities[0m
+[0;34mEnrolling the CA admin[0m
++ fabric-ca-client enroll -u https://admin:adminpw@localhost:9054 --caname ca-orderer --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/07/23 16:30:33 [INFO] Created a default configuration file at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering orderer[0m
++ fabric-ca-client register --caname ca-orderer --id.name orderer --id.secret ordererpw --id.type orderer --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/07/23 16:30:33 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] TLS Enabled
+Password: ordererpw
+[0;34mRegistering the orderer admin[0m
++ fabric-ca-client register --caname ca-orderer --id.name ordererAdmin --id.secret ordererAdminpw --id.type admin --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/07/23 16:30:33 [INFO] Configuration file location: /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/fabric-ca-client-config.yaml
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] TLS Enabled
+Password: ordererAdminpw
+[0;34mGenerating the orderer msp[0m
++ fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the orderer-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/tls --enrollment.profile tls --csr.hosts orderer.universidades.com --csr.hosts localhost --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:33 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/tls/signcerts/cert.pem
+2024/07/23 16:30:33 [INFO] Stored TLS root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/tls/tlscacerts/tls-localhost-9054-ca-orderer.pem
+2024/07/23 16:30:33 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/tls/IssuerPublicKey
+2024/07/23 16:30:33 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the admin msp[0m
++ fabric-ca-client enroll -u https://ordererAdmin:ordererAdminpw@localhost:9054 --caname ca-orderer -M /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/users/Admin@universidades.com/msp --tls.certfiles /home/ubuntu/fabric-samples/universidades/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/07/23 16:30:33 [INFO] TLS Enabled
+2024/07/23 16:30:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/07/23 16:30:33 [INFO] encoded CSR
+2024/07/23 16:30:34 [INFO] Stored client certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/users/Admin@universidades.com/msp/signcerts/cert.pem
+2024/07/23 16:30:34 [INFO] Stored root CA certificate at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/users/Admin@universidades.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2024/07/23 16:30:34 [INFO] Stored Issuer public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/users/Admin@universidades.com/msp/IssuerPublicKey
+2024/07/23 16:30:34 [INFO] Stored Issuer revocation public key at /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/users/Admin@universidades.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating CCP files for Iebs and Cantabria[0m
+ Volume "compose_orderer.universidades.com"  Creating
+ Volume "compose_orderer.universidades.com"  Created
+ Volume "compose_peer0.cantabria.universidades.com"  Creating
+ Volume "compose_peer0.cantabria.universidades.com"  Created
+ Volume "compose_peer0.iebs.universidades.com"  Creating
+ Volume "compose_peer0.iebs.universidades.com"  Created
+time="2024-07-23T16:30:34-04:00" level=warning msg="Found orphan containers ([ca_cantabria ca_iebs ca_orderer]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container orderer.universidades.com  Creating
+ Container couchdb1  Creating
+ Container couchdb0  Creating
+ Container orderer.universidades.com  Created
+ Container couchdb1  Created
+ Container couchdb0  Created
+ Container peer0.cantabria.universidades.com  Creating
+ Container peer0.iebs.universidades.com  Creating
+ Container peer0.iebs.universidades.com  Created
+ Container peer0.cantabria.universidades.com  Created
+ Container couchdb1  Starting
+ Container orderer.universidades.com  Starting
+ Container couchdb0  Starting
+ Container couchdb1  Started
+ Container peer0.cantabria.universidades.com  Starting
+ Container couchdb0  Started
+ Container peer0.iebs.universidades.com  Starting
+ Container orderer.universidades.com  Started
+ Container peer0.iebs.universidades.com  Started
+ Container peer0.cantabria.universidades.com  Started
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                  PORTS                                                                                                                             NAMES
+e6eb29de3695   hyperledger/fabric-peer:latest      "peer node start"        3 seconds ago    Up Less than a second   0.0.0.0:9051->9051/tcp, :::9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp, :::9445->9445/tcp                                    peer0.cantabria.universidades.com
+54ade51e3157   hyperledger/fabric-peer:latest      "peer node start"        3 seconds ago    Up Less than a second   0.0.0.0:7051->7051/tcp, :::7051->7051/tcp, 0.0.0.0:9444->9444/tcp, :::9444->9444/tcp                                              peer0.iebs.universidades.com
+1a8929b02e6c   couchdb:3.3.3                       "tini -- /docker-ent…"   7 seconds ago    Up Less than a second   4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp, :::5984->5984/tcp                                                                     couchdb0
+7ddc094ac3c5   hyperledger/fabric-orderer:latest   "orderer"                7 seconds ago    Up Less than a second   0.0.0.0:7050->7050/tcp, :::7050->7050/tcp, 0.0.0.0:7053->7053/tcp, :::7053->7053/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   orderer.universidades.com
+280ece142da2   couchdb:3.3.3                       "tini -- /docker-ent…"   7 seconds ago    Up Less than a second   4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp, :::7984->5984/tcp                                                                     couchdb1
+fe0d3c9efc3d   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   15 seconds ago   Up 10 seconds           0.0.0.0:8054->8054/tcp, :::8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp, :::18054->18054/tcp                                ca_cantabria
+ca53ae7a3b0b   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   15 seconds ago   Up 10 seconds           0.0.0.0:7054->7054/tcp, :::7054->7054/tcp, 0.0.0.0:17054->17054/tcp, :::17054->17054/tcp                                          ca_iebs
+5a276836a5d3   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   15 seconds ago   Up 10 seconds           0.0.0.0:9054->9054/tcp, :::9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp, :::19054->19054/tcp                                ca_orderer
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'mychannel.block'[0m
+[0;34mUsing organization 1[0m
+/home/ubuntu/fabric-samples/universidades/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile ChannelUsingRaft -outputBlock ./channel-artifacts/mychannel.block -channelID mychannel
+[34m2024-07-23 16:30:41.207 -04 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-07-23 16:30:41.213 -04 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-07-23 16:30:41.213 -04 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-07-23 16:30:41.213 -04 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /home/ubuntu/fabric-samples/universidades/configtx/configtx.yaml
+[34m2024-07-23 16:30:41.215 -04 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-07-23 16:30:41.215 -04 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2024-07-23 16:30:41.215 -04 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel mychannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh mychannel
++ '[' 0 -eq 1 ']'
++ res=0
+Status: 201
+{
+	"name": "mychannel",
+	"url": "/participation/v1/channels/mychannel",
+	"consensusRelation": "consenter",
+	"status": "active",
+	"height": 1
+}
+
+[0;32mChannel 'mychannel' created[0m
+[0;34mJoining iebs peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/mychannel.block
++ res=0
+[34m2024-07-23 16:30:47.337 -04 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-07-23 16:30:47.384 -04 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mJoining cantabria peer to the channel...[0m
+[0;34mUsing organization 2[0m
++ peer channel join -b ./channel-artifacts/mychannel.block
++ res=0
+[34m2024-07-23 16:30:50.477 -04 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-07-23 16:30:50.534 -04 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for iebs...[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching channel config for channel mychannel[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com -c mychannel --tls --cafile /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/tlsca/tlsca.universidades.com-cert.pem
+[34m2024-07-23 16:30:50.581 -04 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-07-23 16:30:50.583 -04 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[34m2024-07-23 16:30:50.583 -04 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 0
+[34m2024-07-23 16:30:50.583 -04 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[0;34mDecoding config block to JSON and isolating config to /home/ubuntu/fabric-samples/universidades/channel-artifacts/IebsMSPconfig.json[0m
+++ configtxlator proto_decode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.pb --type common.Block --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for Org1 on channel mychannel[0m
+++ jq '.channel_group.groups.Application.groups.IebsMSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.iebs.universidades.com","port": 7051}]},"version": "0"}}' /home/ubuntu/fabric-samples/universidades/channel-artifacts/IebsMSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/IebsMSPconfig.json --type common.Config --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/IebsMSPmodified_config.json --type common.Config --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id mychannel --original /home/ubuntu/fabric-samples/universidades/channel-artifacts/original_config.pb --updated /home/ubuntu/fabric-samples/universidades/channel-artifacts/modified_config.pb --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.json
+++ jq .
++++ cat /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"mychannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"mychannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"IebsMSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"IebsMSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.iebs.universidades.com",' '"port":' 7051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/IebsMSPanchors.tx
+[34m2024-07-23 16:30:50.738 -04 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-07-23 16:30:50.746 -04 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'IebsMSP' on channel 'mychannel'[0m
+[0;34mSetting anchor peer for cantabria...[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching channel config for channel mychannel[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com -c mychannel --tls --cafile /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/tlsca/tlsca.universidades.com-cert.pem
+[34m2024-07-23 16:30:50.791 -04 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-07-23 16:30:50.792 -04 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[34m2024-07-23 16:30:50.792 -04 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 1
+[34m2024-07-23 16:30:50.793 -04 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[0;34mDecoding config block to JSON and isolating config to /home/ubuntu/fabric-samples/universidades/channel-artifacts/CantabriaMSPconfig.json[0m
+++ configtxlator proto_decode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.pb --type common.Block --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for Org2 on channel mychannel[0m
+++ jq '.channel_group.groups.Application.groups.CantabriaMSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.cantabria.universidades.com","port": 9051}]},"version": "0"}}' /home/ubuntu/fabric-samples/universidades/channel-artifacts/CantabriaMSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/CantabriaMSPconfig.json --type common.Config --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/CantabriaMSPmodified_config.json --type common.Config --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id mychannel --original /home/ubuntu/fabric-samples/universidades/channel-artifacts/original_config.pb --updated /home/ubuntu/fabric-samples/universidades/channel-artifacts/modified_config.pb --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.json
+++ jq .
++++ cat /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"mychannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"mychannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"CantabriaMSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"CantabriaMSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.cantabria.universidades.com",' '"port":' 9051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /home/ubuntu/fabric-samples/universidades/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /home/ubuntu/fabric-samples/universidades/channel-artifacts/CantabriaMSPanchors.tx
+[34m2024-07-23 16:30:50.949 -04 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-07-23 16:30:50.956 -04 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'CantabriaMSP' on channel 'mychannel'[0m
+[0;32mChannel 'mychannel' joined[0m
+rm: cannot remove '/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem': No such file or directory
+rm: cannot remove '/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/priv_sk': No such file or directory
+ Volume "blockchain-explorer_walletstore"  Creating
+ Volume "blockchain-explorer_walletstore"  Created
+ Volume "blockchain-explorer_pgdata"  Creating
+ Volume "blockchain-explorer_pgdata"  Created
+ Container explorerdb.mynetwork.com  Creating
+ Container explorerdb.mynetwork.com  Created
+ Container explorer.mynetwork.com  Creating
+ Container explorer.mynetwork.com  Created
+ Container explorerdb.mynetwork.com  Starting
+ Container explorerdb.mynetwork.com  Started
+ Container explorerdb.mynetwork.com  Waiting
+ Container explorerdb.mynetwork.com  Healthy
+ Container explorer.mynetwork.com  Starting
+ Container explorer.mynetwork.com  Started
++ '[' false = true ']'
++ peer lifecycle chaincode package studentchaincode.tar.gz --path ./chaincode-go --lang golang --label studentchaincode_1.0.1
++ res=0
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^studentchaincode_1.0.1:8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f$'
++ test 1 -ne 0
++ peer lifecycle chaincode install studentchaincode.tar.gz
++ res=0
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^studentchaincode_1.0.1:8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f$'
++ test 1 -ne 0
++ peer lifecycle chaincode install studentchaincode.tar.gz
++ res=0
+++ peer lifecycle chaincode querycommitted --channelID mychannel --name studentchaincode
+++ sed -n '/Version:/{s/.*Sequence: //; s/, Endorsement Plugin:.*$//; p;}'
+Error: query failed with status: 404 - namespace studentchaincode is not defined
++ COMMITTED_CC_SEQUENCE=
++ res=0
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^studentchaincode_1.0.1:8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f$'
++ res=0
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/tlsca/tlsca.universidades.com-cert.pem --channelID mychannel --name studentchaincode --version 1.0.1 --package-id studentchaincode_1.0.1:8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f --sequence 1
++ res=0
++ peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0.1 --sequence 1 --output json
++ res=0
++ peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0.1 --sequence 1 --output json
++ res=0
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/tlsca/tlsca.universidades.com-cert.pem --channelID mychannel --name studentchaincode --version 1.0.1 --package-id studentchaincode_1.0.1:8828c71ae10d2fcf183e864e55ef2540d1de31bf7d7c821ca26a1c63f030e50f --sequence 1
++ res=0
++ peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0.1 --sequence 1 --output json
++ res=0
++ peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0.1 --sequence 1 --output json
++ res=0
++ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile /home/ubuntu/fabric-samples/universidades/organizations/ordererOrganizations/universidades.com/tlsca/tlsca.universidades.com-cert.pem --channelID mychannel --name studentchaincode --peerAddresses localhost:7051 --tlsRootCertFiles /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/tlsca/tlsca.iebs.universidades.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/cantabria.universidades.com/tlsca/tlsca.cantabria.universidades.com-cert.pem --version 1.0.1 --sequence 1
++ res=0
++ peer lifecycle chaincode querycommitted --channelID mychannel --name studentchaincode
++ res=0
++ peer lifecycle chaincode querycommitted --channelID mychannel --name studentchaincode
++ res=0

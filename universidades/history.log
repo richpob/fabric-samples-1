@@ -1,0 +1,391 @@
+    1  sudo apt update
+    2  sudo apt-get install git
+    3  git --version
+    4  sudo apt-get install curl
+    5  curl --version
+    6  sudo apt update
+    7  sudo apt install -y curl git docker.io docker-compose
+    8  sudo apt install -y curl git docker.io 
+    9  sudo apt install -y curl git docker
+   10  snap install docker
+   11  snap install docker-compose
+   12  wget https://go.dev/dl/go1.21.linux-amd64.tar.gz
+   13  sudo tar -xvf go1.21.linux-amd64.tar.gz -C /usr/local
+   14  echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+   15  source ~/.bashrc
+   16  wget https://go.dev/dl/go1.21.linux-amd64.tar.gz
+   17  snap install go
+   18  snap install go-lang
+   19  wget https://go.dev/dl/go1.21.linux-amd64.tar.gz
+   20  snap install go-lang
+   21  snap install go
+   22  snap install go  --classic
+   23  go version
+   24  mkdir -p ~/fabric-samples
+   25  cd ~/fabric-samples
+   26  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   27  sudo usermod -aG docker $USER
+   28  clear
+   29  docker --version
+   30  sudo usermod -aG Docker $USER
+   31  ls 
+   32  rm -R fabric-samples/
+   33  sudo rm -R fabric-samples/
+   34  sudo usermod -aG ubuntu $USER
+   35  sudo systemctl enable ubuntu
+   36  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   37  sudo usermod -aG sudo ubuntu docker
+   38  sudo usermod -aG sudo ubuntu
+   39  sudo usermod -aG sudo docker
+   40  groups ubuntu
+   41  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   42  sudo curl -sSL https://bit.ly/2ysbOFE | bash -s
+   43  sudo adduser nombre_de_usuario sudo
+   44  sudo adduser ubuntu sudo
+   45  id -nG
+   46  chmod 777 /var/run/docker.sock
+   47  sudo chown root:docker /var/run/docker.sock
+   48  exit
+   49  cd fabric-samples/
+   50  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   51  sudo groupadd docker
+   52  sudo usermod -aG docker ${USER}
+   53  su -s ${USER}
+   54  clear
+   55  docker run hello-world
+   56  docker --version
+   57  sudo apt update
+   58  sudo apt upgrade
+   59  lsb_release -a
+   60  snap remove docker
+   61  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+   62  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   63  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   64  sudo apt update
+   65  sudo apt install docker-ce docker-ce-cli containerd.io
+   66  sudo systemctl status docker
+   67  clear
+   68  sudo curl -L "https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   69  sudo chmod +x /usr/local/bin/docker-compose
+   70  docker-compose --version
+   71  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   72  clear
+   73  sudo usermod -aG docker $USER
+   74  sudo systemctl enable docker
+   75  sudo systemctl start docker
+   76  docker --version
+   77  sudo apt update
+   78  sudo apt install docker-ce docker-ce-cli containerd.io
+   79  sudo systemctl status docker
+   80  sudo curl -L "https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   81  docker-compose --version
+   82  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   83  su -s docker
+   84  sudo curl -sSL https://bit.ly/2ysbOFE | bash -s
+   85  sudo usermod -a -G docker jenkins
+   86  sudo usermod -a -G docker ubuntu
+   87  sudo usermod -a -G docker $USER
+   88  docker:x:998:[user]
+   89  docker:x:998:[ubuntu]
+   90  usermod -aG root ubuntu
+   91  sudo usermod -aG root ubuntu
+   92  sudo chmod 664 /var/run/docker.sock
+   93  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   94  chmod 777 /var/run/docker.soc
+   95  chmod 777 /var/run/docker.sock
+   96  sudo chmod 777 /var/run/docker.sock
+   97  su - ${USER}
+   98  curl -sSL https://bit.ly/2ysbOFE | bash -s
+   99  cd ~/fabric-samples/test-network
+  100  ./network.sh up createChannel -c mychannel -ca
+  101  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
+  102  ls -la
+  103  cd fabric-samples/
+  104  ls -la
+  105  ./network.sh up createChannel -c mychannel -ca
+  106  cleart
+  107  clear
+  108  la -la
+  109  cd ..
+  110  rm -R fabric-samples/
+  111  sudo rm -R fabric-samples/
+  112  curl -sSL https://bit.ly/2ysbOFE | bash -s
+  113  cd ~/fabric-samples/test-network
+  114  ./network.sh up createChannel -c mychannel -ca
+  115  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
+  116  sudo apt-get install jq
+  117  ./network.sh down
+  118  cd ~/fabric-samples/test-network
+  119  ./network.sh up createChannel -c mychannel -ca
+  120  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
+  121  git clone https://github.com/hyperledger/blockchain-explorer.git
+  122  cd blockchain-explorer
+  123  git checkout v1.1.8
+  124  docker-compose -f docker-compose.yaml up -d
+  125  ls -la
+  126  vi docker-compose.yaml
+  127  docker-compose -f docker-compose.yaml up -d
+  128  cd ..
+  129  ./network.sh down
+  130  cd blockchain-explorer/
+  131  docker-compose down
+  132  cd ..
+  133  clear
+  134  cd ~~/fabric-samples/test-network/organizations
+  135  cd ~/fabric-samples/test-network/organizations
+  136  more /peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+  137  more ./peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+  138  more ./peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+  139  cd peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/
+  140  ls
+  141  mv cert.pem User1@org1.example.com-cert.pem
+  142  more ./peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+  143  ls
+  144  cd 
+  145  cd fabric-samples/test-network/organizations/
+  146  more ./peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+  147  cd 
+  148  clear
+  149  mkdir caliper
+  150  ls -la
+  151  pwd
+  152  cd caliper/
+  153  ls -la
+  154  caliper
+  155  caliper --version
+  156  cd test-network
+  157  cd ..
+  158  cd ~/fabric-samples/test-network
+  159  ./network.sh up createChannel -c mychannel -ca
+  160  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
+  161  cd blockchain-explorer/
+  162  ls -la
+  163  docker-compose -f docker-compose.yaml up -d
+  164  docker-compose down
+  165  docker-compose -f docker-compose.yaml up -d
+  166  docker-compose down
+  167  docker-compose -f docker-compose.yaml up -d
+  168  docker-compose down
+  169  docker-compose -f docker-compose.yaml up -d
+  170  docker-compose down
+  171  docker-compose -f docker-compose.yaml up -d
+  172  npm install -g @hyperledger/caliper-cli
+  173  caliper bind --caliper-bind-sut fabric:2.2
+  174  sudo apt install npm
+  175  caliper bind --caliper-bind-sut fabric:2.2
+  176  npm install -g @hyperledger/caliper-cli
+  177  node.js version
+  178  node version
+  179  sudo apt install nodejs npm -y
+  180  npm -v
+  181  npm install -g @hyperledger/caliper-cli
+  182  sudo npm install -g @hyperledger/caliper-cli
+  183  caliper launch manager --caliper-workspace . --caliper-benchconfig benchmarks/scenario/simple/config.yaml --caliper-networkconfig networks/fabric/v2.2/networkConfig.yaml
+  184  ls -la
+  185  docker-compose down
+  186  cd ..
+  187  ./network.sh down
+  188  clear
+  189  cd ..
+  190  ls -la
+  191  cd test-network
+  192  ls
+  193  mv cambia_dominio_universidades.sh ..
+  194  cd ..
+  195  ls -la
+  196  bash cambia_dominio_universidades.sh 
+  197  find ./universidades  -type f -name "*.yaml" -exec sed -i 's/mychannel/universidadeschannel./g' {} +
+  198  bash cambia_dominio_universidades.sh 
+  199  find ./universidades  -type f -name "*.yaml" 
+  200  BASE_DIR="./universidades"
+  201  ECHO $BASE_DIR
+  202  echo $BASE_DIR
+  203  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/org1./iebs./g' {} +
+  204  sudo find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/org1./iebs./g' {} +
+  205  more cambia_dominio_universidades.sh 
+  206  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/Org1/Iebs/g' {} +
+  207  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/Org2/Cantabria/g' {} +
+  208  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/example.com/universidades.com/g' {} +
+  209  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/org1./iebs./g' {} +
+  210  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/org2./cantabria./g' {} +
+  211  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/mychannel/universidadeschannel./g' {} +
+  212  find $BASE_DIR -type f -name "*.yaml" -exec sed -i 's/fabric_network/universidades_network./g' {} +
+  213  clear
+  214  sh cambia_dominio_universidades.sh 
+  215  cd universidades/
+  216  cd ..
+  217  sh cambia_dominio_universidades.sh 
+  218  bash cambia_dominio_universidades.sh 
+  219  BASE_DIR="~/fabric-samples/universidades/"
+  220  sudo rm -R $BASE_DIR
+  221  pwd
+  222  bash cambia_dominio_universidades.sh 
+  223  cd universidades/
+  224  cd blockchain-explorer/
+  225  docker-compose -f docker-compose.yaml up -d
+  226  cd ..
+  227  bash cambia_dominio_universidades.sh 
+  228  cd universidades/
+  229  cd blockchain-explorer/
+  230  docker-compose -f docker-compose.yaml up -d
+  231  grep -r "org1.example.com" .
+  232  cd universidades/
+  233  cd blockchain-explorer/
+  234  docker-compose down
+  235  BASE_DIR="/home/ubuntu/fabric-samples/universidades/blockchain-explore
+
+  236  BASE_DIR="/home/ubuntu/fabric-samples/universidades/blockchain-explorer
+  237  BASE_DIR="/home/ubuntu/fabric-samples/universidades/blockchain-explorer"
+  238  echo $BASE_DIR
+  239  find $BASE_DIR -type f -name "*.json" -exec sed -i 's/Org1/Iebs/g' {} +
+  240  find $BASE_DIR -type f -name "*.json" -exec sed -i 's/Org2/Cantabria/g' {} +
+  241  find $BASE_DIR -type f -name "*.json" -exec sed -i 's/example.com/universidades.com/g' {} +
+  242  find $BASE_DIR -type f -name "*.json" -exec sed -i 's/org1/iebs/g' {} +
+  243  find $BASE_DIR -type f -name "*.json" -exec sed -i 's/org2/cantabria/g' {} +
+  244  find $BASE_DIR -type f -name "*.json" -exec sed -i 's/fabric_test/universidades_netwok/g' {} +
+  245  find $BASE_DIR -type f -name "*.yml" -exec sed -i 's/Org1/Iebs/g' {} +
+  246  find $BASE_DIR -type f -name "*.yml" -exec sed -i 's/Org2/Cantabria/g' {} +
+  247  find $BASE_DIR -type f -name "*.yml" -exec sed -i 's/example.com/universidades.com/g' {} +
+  248  find $BASE_DIR -type f -name "*.yml" -exec sed -i 's/org1/iebs/g' {} +
+  249  find $BASE_DIR -type f -name "*.yml" -exec sed -i 's/org2/cantabria/g' {} +
+  250  find $BASE_DIR -type f -name "*.yml" -exec sed -i 's/fabric_test/universidades_netwok/g' {} +
+  251  docker-compose -f docker-compose.yaml up -d
+  252  docker-compose down
+  253  cd ..
+  254  cd organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/
+  255  ls
+  256  cd
+  257  clear
+  258  cp ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/cert.pem /fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem
+  259  cp ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/cert.pem ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem
+  260  cd fabric-samples/universidades/blockchain-explorer/
+  261  docker-compose -f docker-compose.yaml up -d
+  262  cd ..
+  263  cd organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/
+  264  ls
+  265  cp $(find ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore -name "*sk" | head -n 1) ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/priv_sk
+  266  ls -la
+  267  cd
+  268  cd fabric-samples/universidades/blockchain-explorer/
+  269  docker-compose down
+  270  docker-compose -f docker-compose.yaml up -d
+  271  docker-compose down
+  272  cd ..
+  273  docker-compose down
+  274  ./network.sh down
+  275  ./network.sh up createChannel -c mychannel -ca
+  276  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
+  277  cd blockchain-explorer/
+  278  [200~rm ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem
+  279  rm ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/priv_sk
+  280  cp ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/cert.pem ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem
+  281  cp $(find ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore -name "*sk" | head -n 1) ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/priv_sk
+  282  clear
+  283  rm ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem
+  284  rm ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/priv_sk
+  285  cp ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/cert.pem ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/signcerts/User1@iebs.universidades.com-cert.pem
+  286  cp $(find ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore -name "*sk" | head -n 1) ~/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/users/User1@iebs.universidades.com/msp/keystore/priv_sk
+  287  vi copia_certificados.sh
+  288  bash copia_certificados.sh 
+  289  docker-compose -f docker-compose.yaml up -d
+  290  cd ..
+  291  ./network.sh --help
+  292  cd blockchain-explorer/
+  293  docker-compose down
+  294  cd ..
+  295  ./network.sh down
+  296  ./network.sh --help
+  297  ./network.sh up createChannel -c mychannel -ca -s couchdb
+  298  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go 
+  299  ls -la c*
+  300  cd chaincode-go/
+  301  ./network.sh deployCC -ccn basic -ccp ./chaincode-go -ccl go 
+  302  cd ..
+  303  ./network.sh deployCC -ccn basic -ccp ./chaincode-go -ccl go 
+  304  cd blockchain-explorer/
+  305  docker-compose -f docker-compose.yaml up -d
+  306  docker-compose down
+  307  bash copia_certificados.sh 
+  308  docker-compose -f docker-compose.yaml up -d
+  309  cd ..
+  310  ./network.sh deployCC -ccn StudentChaincode -ccp ./chaincode-go -ccl go 
+  311  cd chaincode-go/
+  312  ls -la
+  313  cd ..
+  314  clear
+  315  peer lifecycle chaincode package student.tar.gz --path ./chaincode-go/ --lang golang --label student_1
+  316  ../bin/peer lifecycle chaincode package student.tar.gz --path ./chaincode-go/ --lang golang --label student_1
+  317  cd chaincode-go/
+  318  clear
+  319  go get github.com/hyperledger/fabric-contract-api-go/contractapi
+  320  go install golang.org/x/tools/gopls@latest
+  321  go mod init studentchaincode  
+  322  go get github.com/hyperledger/fabric-contract-api-go/contractapi
+  323  go mod tidy
+  324  GO111MODULE=on go mod vendor
+  325  clear
+  326  cd ..
+  327  ./network.sh deployCC -ccn studentchaincode -ccp ./chaincode-go -ccl go 
+  328  peer
+  329  pwd
+  330  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem -C autopistaschannel -n studentchaincode --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt -c '{"function":"InitLedger","Args":[]}'
+  331  per
+  332  peer
+  333  source /etc/environment
+  334  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem -C autopistaschannel -n studentchaincode --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt -c '{"function":"InitLedger","Args":[]}'
+  335  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem -C mychannel -n studentchaincode --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt -c '{"function":"InitLedger","Args":[]}'
+  336  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  337  ./network.sh --help
+  338  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  339  peer chaincode invoke -C mychannel  -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  340  export PATH=${PWD}/../bin:$PATH
+  341  export FABRIC_CFG_PATH=$PWD/../config/
+  342  export CORE_PEER_TLS_ENABLED=true
+  343  export CORE_PEER_LOCALMSPID="IebsMSP"
+  344  export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt
+  345  export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp
+  346  export CORE_PEER_ADDRESS=localhost:7051
+  347  peer chaincode invoke -C mychannel  -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  348  peer chaincode invoke -C mychannel  -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  349  peer chaincode invoke -C mychannel -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  350  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  351  peer chaincode invoke -C mychannel -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  352  pwd
+  353  echo $FABRIC_CFG_PATH
+  354  ls $FABRIC_CFG_PATH
+  355  peer
+  356  clear
+  357  echo $FABRIC_CFG_PATH
+  358  more ${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt
+  359  ls ${PWD}/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp
+  360  ${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem
+  361  [200~export PATH=${PWD}/../bin:$PATH
+  362  export FABRIC_CFG_PATH=$PWD/../config/
+  363  export CORE_PEER_TLS_ENABLED=true
+  364  export CORE_PEER_LOCALMSPID="IebsMSP"
+  365  export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/iebs.universidades.com/peers/peer0.iebs.universidades.com/tls/ca.crt
+  366  export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/iebs.universidades.com/users/Admin@iebs.universidades.com/msp
+  367  export CORE_PEER_ADDRESS=localhost:7051
+  368  export ORDERER_CA=${PWD}/organizations/ordererOrganizations/universidades.com/orderers/orderer.universidades.com/msp/tlscacerts/tlsca.universidades.com-cert.pem
+  369  peer chaincode invoke -C mychannel -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  370  peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QueryStudent","1"]}'
+  371  peer chaincode invoke -C mychannel -o localhost:7050 --ordererTLSHostnameOverride orderer.universidades.com --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA -C mychannel -n studentchaincode -c '{"function":"InitLedger","Args":[]}'
+  372  peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QueryStudent","1"]}'
+  373  peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QueryStudent","0"]}'
+  374  peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0 --sequence 1 --tls --cafile $ORDERER_CA --output json
+  375  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 1 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_ORG1_CA
+  376  peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --output json
+  377  echo $PEER0_IEBS_CA
+  378  echo $ORDERER_CA
+  379  clear
+  380  export PEER0_IEBS_CA=/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/tlscacerts/ca.crt
+  381  peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --output json
+  382  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_ORG1_CA
+  383  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_IEBS_CA
+  384  export PEER0_IEBS_CA=/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/msp/cacerts/localhost-7054-ca-iebs.pem
+  385  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_IEBS_CA
+  386  export PEER0_IEBS_CA=/home/ubuntu/fabric-samples/universidades/organizations/peerOrganizations/iebs.universidades.com/tlsca/tlsca.iebs.universidades.com-cert.pem
+  387  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_IEBS_CA
+  388  export PEER0_IEBS_CA=$CORE_PEER_TLS_ROOTCERT_FILE
+  389  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name studentchaincode --version 1.0 --sequence 2 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_IEBS_CA
+  390  history > history.log
