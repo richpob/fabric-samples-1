@@ -339,7 +339,7 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.uni
 #Para consultar la información de un estudiante con ID "1":
 peer chaincode query -C mychannel -n studentchaincode -c '{"Args":["QueryStudent","1"]}'
 ```
-## Log de la ejecucion de los SH
+## Log de la ejecucion de los SH (instalacion de ambiente e interaccion con chaincode student
 ``` bash
 [0;34mUsing docker and docker-compose[0m
 [0;34mStopping network[0m
