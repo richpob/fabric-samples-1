@@ -21,6 +21,32 @@
 ### Canales
 ![image](https://github.com/user-attachments/assets/94397482-3fea-41d9-9b6c-a6c0ecc4a0a2)
 
+## CouchDB
+### Regitros en la Base de Datos
+![image](https://github.com/user-attachments/assets/b72400e7-302a-44a6-862b-40288a071142)
+### Registro de nuevo alumno
+![image](https://github.com/user-attachments/assets/ac2d3a73-ac10-4286-b8e4-c568b54bd228)
+### Cambio de Universidad
+![image](https://github.com/user-attachments/assets/0ec2f186-0c21-4270-9675-ae6531508d40)
+
+# Ambiente de desarrollo
+## VS Code
+![image](https://github.com/user-attachments/assets/ee5ed2bf-dfdd-4642-81d7-e6b8554c7126)
+## Compementos docker y despliegue de instancia y volumnes de la red universitaria, Hyperledger Explorer y chaincode
+![image](https://github.com/user-attachments/assets/d2a532ff-0f36-4959-ae12-d50d01051f15)
+
+# Codigos Fuentes
+## Smart Contract o Chaincoude StudentChaincode.go
+
+## Script sh de creacion ambiente 
+
+## Script de TX de funcciones del smartcontract 
+
+
+
+
+
+
 
 
 
